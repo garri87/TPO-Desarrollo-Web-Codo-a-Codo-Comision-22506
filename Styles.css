@@ -5,7 +5,8 @@ body{
     display: grid;
     justify-items: center;
     grid-template-columns: 100%;
-   background-color: #d5d3b7;
+   background-color: #292022;
+   margin: 0px;
 }
 
 html{
