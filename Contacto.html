@@ -6,11 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="Styles.css">
-    <title>Document</title>
+    <title>Contacto</title>
 </head>
 <body>
     <div>
         <script src="Nav.js"></script>
     </div>
+
+    <div class="FormBox" id="">
+        <div class="Social">
+          <a href=""><img src="Img/facebookLogo.png"
+              alt="">Facebook</a>
+  
+          <a href=""><img src="Img/instagramLogo.png"
+              alt="">Instagram</a>
+  
+          <a href="https://wa.me/5492216281775"><img src="Img/whatsappLogo.png" alt="">WhatsApp</a>
+  
+        </div>
+  
+        <div class="Formulario">
+          <h2>Contactanos</h2>
+          <form action="https://formsubmit.co/garri87@hotmail.com" method="POST">
+  
+            <input type="text" name="_honey" style="display:none;">
+  
+            <input type="hidden" name="_captcha" value="false">
+  
+            <input type="hidden" name="_next" value="">
+  
+            <label for="FormNombre"><b>Nombre:</b></label>
+            <input type="text" name="name" id="formNombre" required>
+  
+            <label for="FormTelefono"><b>Telefono:</b></label>
+            <input type="text" id="formTelefono">
+  
+            <label for="FormCorreo"><b>Correo:</b></label>
+            <input type="email" name="email" id="formCorreo" required>
+            <br>
+            <label for="formMensaje"><b>Mensaje:</b></label>
+            <textarea name="formMensaje" id="formMensaje" cols="30" rows="10">Escriba su mensaje</textarea required>
+            <br>
+            <button type="submit" id="submit">Enviar</button>
+          </form>
+  
+        </div>
+    </div>
+    
 </body>
 </html>

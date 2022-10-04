@@ -12,11 +12,11 @@
     const historia = createNavLink("HISTORIA");
     const vinedos = createNavLink("NUESTRO VIÑEDOS");
     const vinos = createNavLink("NUESTROS VINOS");
-    const Contacto = createNavLink("CONTACTO");
+    const contacto = createNavLink("CONTACTO");
     
     inicio.setAttribute("href", "index.html");
     historia.setAttribute("href", "#historia");
-    
+    contacto.setAttribute("href", "Contacto.html");
 
     document.body.appendChild(header);
     header.appendChild(logo);
@@ -25,7 +25,7 @@
     nav.appendChild(historia);
     nav.appendChild(vinedos);
     nav.appendChild(vinos);
-    nav.appendChild(Contacto);
+    nav.appendChild(contacto);
 
 function createNavLink(title) {
 
