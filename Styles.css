@@ -5,7 +5,7 @@ body{
     display: grid;
     justify-items: center;
     grid-template-columns: 100%;
-   background-color: #292022;
+   background-color: #0e0e0e;
    margin: 0px;
 }
 
@@ -54,6 +54,8 @@ a:hover{
     opacity: 0.9;
     width: 100%;
     margin-top: 0.1%;
+    animation-name: fadeIn;
+    animation-duration: 2s;
 }
 
 .imgBkgrnd div{
@@ -63,6 +65,8 @@ a:hover{
 .titulo, .bajada{
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px black;
+    animation-name: fadeIn;
+    animation-duration: 4s;
 }
 
 .titulo{
@@ -80,7 +84,9 @@ a:hover{
     margin-top: 1%;
     width: 70%;
     text-align: justify;
-    background-color: #87623141;
+    background-color: #3f3f3f;
+    animation-name: fadeIn;
+    animation-duration: 4s;
     
 }
 
@@ -89,15 +95,26 @@ a:hover{
     color: white;
 }
 
-.historia h1{
-    background-color: 	#d5d3b79d;
-    padding: 3%;
+.historia h1{   
+    text-align: left;
 }
 
 .historia img {
     float: right;
-    margin: 1%;
+    margin: 2%;
     border: 1px solid #7e2d17;
+}
+
+.FormBox{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: start;
+    width: 100%;
+    background-color: rgb(219, 219, 219);
+    border-top: 1px solid black;
+
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 
 .Formulario {
@@ -136,14 +153,7 @@ label {
     font-family: 'Lato', sans-serif;
 }
 
-.FormBox{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    align-items: start;
-    width: 100%;
-    background-color: rgb(219, 219, 219);
-    border-top: 1px solid black;
-}
+
 
 .Social{
     display: grid;
@@ -172,4 +182,15 @@ label {
     font-size: 100%;
     text-align: left;
     color: black;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 100%
+    }
+
 }
