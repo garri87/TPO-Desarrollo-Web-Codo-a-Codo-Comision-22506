@@ -11,40 +11,93 @@
 </head>
 
 <body>
+
     <div>
         <script src="Nav.js"></script>
     </div>
 
+
     <div class="imgBkgrnd">
         <div>
-            <h1 class="titulo">"Frase Vinesca Inspiradora."</h1>
-            <h2 class="bajada">Bajada de frase.</h2>
+            <h1 class="titulo">La verdadera escencia de la naturaleza mezclado con pasión</h1>
+            <h2 class="bajada"> Mas de 120 años generando emociones únicas</h2>
         </div>
     </div>
 
-    <div class="historia" id="historia">
+    <div class="Box" id="historia">
         <h1 class="titulo">
-            La historia
+            Nosotros
         </h1>
-        <img src="Img/image 80.png" class="imgHistoria" width="50%" alt="Copa de vino">
+        <img src="Img/enologo.jpg" class="imgHistoria" width="50%" alt="Copa de vino">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima culpa itaque voluptate. Ea optio magni
-            eligendi rerum fugit, quaerat deserunt adipisci a vel sed pariatur reiciendis dolor. At, voluptatibus
-            maiores dolorum velit corrupti quos rerum corporis sint quasi cupiditate molestias neque totam ab a quis!
-            Fugit, explicabo, aperiam quod quis magnam eius libero voluptates saepe sapiente ratione unde, provident
-            debitis alias eos laborum! Dolor dignissimos iusto eligendi dicta voluptatibus? Iusto suscipit consequatur
-            odio reiciendis eligendi atque similique? Repellat, autem magni asperiores maiores sed maxime nulla
-            provident, facere quae esse perspiciatis dolorem modi neque numquam deserunt voluptatibus tempore aliquam
-            facilis voluptatum, veritatis consequuntur ea veniam similique. <br> Explicabo, ratione. Fuga earum dolorem
-            rerum
-            aspernatur magni! Unde alias commodi perferendis culpa neque deserunt suscipit corporis deleniti
-            repellendus? Soluta, atque quas hic reiciendis modi earum, incidunt fuga perspiciatis distinctio doloribus
-            consequatur. Nostrum laborum itaque esse natus corporis fugit rerum voluptatem velit totam, architecto
-            libero, vel fuga quibusdam. Aut suscipit quibusdam est veniam praesentium. Assumenda rerum, cum, totam
-            mollitia ipsam deserunt fugit sequi molestiae tempora facere excepturi nostrum obcaecati, similique
+            Somos una Bodega con Herencia Familiar que se proyecta con sus valores de tradición, calidad, prestigio,
+            innovación y contemporaneidad en la vitivinicultura argentina. <br>
+            <br>
+            Somos parte del patrimonio y la riqueza de nuestra tierra. Somos orgullo, logros y una calidad y excelencia
+            irrenunciables en todos nuestros productos, hoy y mirando al futuro. <br>
+            <br>
+            Situados en nuestro histórico terruño de San Rafael y en el Valle de Uco, provincia de Mendoza, somos la
+            bodega patrimonio de la Argentina, reconocida mundialmente por nuestra larga trayectoria elaborando vinos y
+            espumantes de excelencia.<br>
+            <br>
+            Bodegas Luigi Rosca es hoy una marca global con presencia en más de 40 países representando los valores y la
+            calidad del vino argentino en todo el mundo.<br>
+            <br>
+            El terroir de Valle de Uco es un hito para Bodegas Luigi Rosca por que marca el inicio, el primer movimiento de
+            nuestra estrategia de marca global. Es el crecimiento natural de nuestra historia de más de 120 años en la
+            búsqueda de nuevos sabores para el mercado local e internacional.<br>
         </p>
 
     </div>
+
+    <div class="Popup" id="popup">
+        <div>
+
+            <h4>Sitio solo para mayores de 18 años</h4>
+            <h2> Por favor ingrese su fecha de nacimiento </h2>
+            <input type="date" name="fecha" id="fecha">
+            <br>
+            <button type="submit" id="submit" onclick="ValidateDate()">Enviar</button>
+
+            <p>Beber con moderación, prohibida su venta a menores de 18 años</p>
+        </div>
+
+
+    </div>
 </body>
+
+<script>
+
+    const popup = document.getElementById("popup");
+
+    if (localStorage.getItem("age") >= 18) {
+        popup.style.display = 'none';
+    } else {
+        popup.style.display = 'block';
+    }
+
+    function ValidateDate() {
+
+
+        const today = new Date();
+
+        const birthDate = new Date(document.getElementById('fecha').value);
+
+        var age = today.getFullYear() - birthDate.getFullYear();
+
+
+        if (age >= 18) {
+            popup.style.display = 'none';
+
+            localStorage.setItem("age", age);
+        }
+        else {
+            alert("Lo sentimos, no puede ingresar al sitio");
+        }
+
+
+
+    }
+</script>
 
 </html>

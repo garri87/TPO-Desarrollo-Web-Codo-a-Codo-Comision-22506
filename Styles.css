@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
 body{
     display: grid;
     justify-items: center;
     grid-template-columns: 100%;
-   background-color: #0e0e0e;
+   background-color: #1b1b1b;
    margin: 0px;
 }
 
@@ -46,6 +48,60 @@ a:hover{
     background-color: #8583718a;
 }
 
+input{
+
+}
+
+.Popup{
+    background-color: rgba(0, 0, 0, 0.658); 
+    
+    opacity: 0.99;
+    display: grid;
+    position: fixed;
+    grid-template-columns: 100%;
+    justify-items: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.Popup div{
+    background-color: rgb(27, 27, 27);
+    border: 2px solid rgb(156, 148, 54);
+    left: 50%;
+    top: 50%;
+    width: 70vw;
+    text-align: center;
+    height: fit-content;
+    font-size: 3vh;
+}
+
+.Popup button{
+
+    border: none;
+    margin: 2%;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100px;
+    color: black;
+    font-weight: bold;
+}
+
+.Popup input{
+    padding: 10px;
+    background-color: rgb(212, 212, 212)
+}
+
+.Popup input:hover{
+    cursor: text;
+}
+
+button:hover{
+    background-color: rgb(146, 146, 146);
+    cursor: pointer;
+}
+
 .imgBkgrnd{
     height: 70vh;
     background-image: url(img/image\ 79.png);
@@ -54,8 +110,14 @@ a:hover{
     opacity: 0.9;
     width: 100%;
     margin-top: 0.1%;
-    animation-name: fadeIn;
-    animation-duration: 2s;
+
+    animation: 
+    fadeIn 2s forwards,
+    slideDown 12s forwards
+    ;
+
+
+
 }
 
 .imgBkgrnd div{
@@ -69,16 +131,21 @@ a:hover{
     animation-duration: 4s;
 }
 
-.titulo{
+h1,h2,h4,p, button{
     font-family: 'Lato', sans-serif;
- 
+    color: white; 
+}
+
+input{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
 }
 
 .bajada{
     font-family: 'Montserrat', sans-serif;
 }
 
-.historia{
+.Box{
     display: block;
     padding: 2%;
     margin-top: 1%;
@@ -90,19 +157,21 @@ a:hover{
     
 }
 
-.historia p{    
+.Box p{    
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
 }
 
-.historia h1{   
+.Box h1{   
     text-align: left;
 }
 
-.historia img {
+.Box img {
     float: right;
-    margin: 2%;
-    border: 1px solid #7e2d17;
+    margin-left: 2%;
+    border: 1px solid #b6b6b6;
+    
+    
 }
 
 .FormBox{
@@ -192,5 +261,15 @@ label {
     to {
         opacity: 100%
     }
+    
 
 }
+
+@keyframes slideDown {
+    from {
+        background-position: top;
+    }
+
+    to {
+        background-position: bottom;
+    }

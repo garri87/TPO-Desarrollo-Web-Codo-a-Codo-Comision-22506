@@ -16,7 +16,10 @@
     
     inicio.setAttribute("href", "index.html");
     historia.setAttribute("href", "#historia");
+    vinedos.setAttribute("href", "Vinedos.html");
+    vinos.setAttribute("href", "Vinos.html");
     contacto.setAttribute("href", "Contacto.html");
+
 
     document.body.appendChild(header);
     header.appendChild(logo);
