@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="Styles.css">
-    <title>Contacto</title>
+  <link rel="stylesheet" href="Styles.css">
+  <title>Contacto</title>
 </head>
+
 <body>
-    <div>
-        <script src="Nav.js"></script>
+  <div>
+    <script src="Nav.js"></script>
+  </div>
+
+  <div class="FormBox" id="">
+    <div class="Social">
+      <a href=""><img src="Img/facebookLogo.png" alt="">Facebook</a>
+
+      <a href=""><img src="Img/instagramLogo.png" alt="">Instagram</a>
+
+      <a href="https://wa.me/5492216281775"><img src="Img/whatsappLogo.png" alt="">WhatsApp</a>
+
     </div>
 
-    <div class="FormBox" id="">
-        <div class="Social">
-          <a href=""><img src="Img/facebookLogo.png"
-              alt="">Facebook</a>
-  
-          <a href=""><img src="Img/instagramLogo.png"
-              alt="">Instagram</a>
-  
-          <a href="https://wa.me/5492216281775"><img src="Img/whatsappLogo.png" alt="">WhatsApp</a>
-  
-        </div>
-  
-        <div class="Formulario">
-          <h2>Contactanos</h2>
-          <form action="https://formsubmit.co/pfloresphoto@hotmail.com" method="POST">
-  
-            <input type="text" name="_honey" style="display:none;">
-  
-            <input type="hidden" name="_captcha" value="false">
-  
-            <input type="hidden" name="_next" value="">
-  
-            <label for="FormNombre"><b>Nombre:</b></label>
-            <input type="text" name="name" id="formNombre" required>
-  
-            <label for="FormTelefono"><b>Telefono:</b></label>
-            <input type="text" id="formTelefono">
-  
-            <label for="FormCorreo"><b>Correo:</b></label>
-            <input type="email" name="email" id="formCorreo" required>
-            <br>
-            <label for="formMensaje"><b>Mensaje:</b></label>
-            <textarea name="formMensaje" id="formMensaje" cols="30" rows="10">Escriba su mensaje</textarea required>
-            <br>
-            <button type="submit" id="submit">Enviar</button>
-          </form>
-  
-        </div>
+    <div class="Map">
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21771.899195801467!2d-68.69204510881426!3d-33.05215641138991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e6d0009cbab15%3A0x9a56d0384f3c8a66!2sFinca%20El%20Para%C3%ADso%20-%20Bodega%20Luigi%20Bosca!5e1!3m2!1ses-419!2sar!4v1665598175943!5m2!1ses-419!2sar"
+         style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
     </div>
+
+    <div class="Formulario">
+      <h2>Contactanos</h2>
+      <form action="https://formsubmit.co/pfloresphoto@hotmail.com" method="POST">
+
+        <input type="text" name="_honey" style="display:none;">
+
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="hidden" name="_next" value="">
+
+        <label for="FormNombre"><b>Nombre:</b></label>
+        <input type="text" name="name" id="formNombre" required>
+
+        <label for="FormTelefono"><b>Telefono:</b></label>
+        <input type="text" id="formTelefono">
+
+        <label for="FormCorreo"><b>Correo:</b></label>
+        <input type="email" name="email" id="formCorreo" required>
+        <br>
+        <label for="formMensaje"><b>Mensaje:</b></label>
+        <textarea name="formMensaje" id="formMensaje" cols="30" rows="10">Escriba su mensaje</textarea required>
+        <br>
+        <button type="submit" id="submit">Enviar</button>
+      </form>
+  
+    </div>
+
+    
+  </div>
     
 </body>
 </html>
