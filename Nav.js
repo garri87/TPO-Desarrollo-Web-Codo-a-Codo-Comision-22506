@@ -10,13 +10,19 @@
     const nav = document.createElement("nav");
     const inicio = createNavLink("INICIO");
     const historia = createNavLink("HISTORIA");
-    const vinedos = createNavLink("NUESTRO VIÑEDOS");
-    const vinos = createNavLink("NUESTROS VINOS");
+    const vinedos = createNavLink("VIÑEDOS");
+    const vinos = createNavLink("VINOS");
+    const bodega = createNavLink("BODEGA");
+    const enoturismo = createNavLink("ENOTURISMO");
     const contacto = createNavLink("CONTACTO");
     
     inicio.setAttribute("href", "index.html");
-    historia.setAttribute("href", "#historia");
+    historia.setAttribute("href", "historia.html");
     contacto.setAttribute("href", "Contacto.html");
+    vinedos.setAttribute("href", "vinedos.html");
+    vinos.setAttribute("href", "vinos.html");
+    bodega.setAttribute("href", "bodega.html");
+    enoturismo.setAttribute("href", "enoturismo.html");
 
     document.body.appendChild(header);
     header.appendChild(logo);
@@ -25,6 +31,8 @@
     nav.appendChild(historia);
     nav.appendChild(vinedos);
     nav.appendChild(vinos);
+    nav.appendChild(bodega);
+    nav.appendChild(enoturismo);
     nav.appendChild(contacto);
 
 function createNavLink(title) {
