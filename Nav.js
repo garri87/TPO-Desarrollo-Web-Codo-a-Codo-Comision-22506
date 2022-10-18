@@ -8,16 +8,19 @@
     logo.setAttribute("class","logo");
     logo.innerHTML = "Luigi Rosca";
     const nav = document.createElement("nav");
-    const inicio = createNavLink("INICIO");
-    const historia = createNavLink("HISTORIA");
-    const vinedos = createNavLink("NUESTRO VIÑEDOS");
-    const vinos = createNavLink("NUESTROS VINOS");
-    const contacto = createNavLink("CONTACTO");
+    const inicio = createNavLink("Inicio");
+    const historia = createNavLink("Historia");
+    const vinedos = createNavLink("Nuestros Viñedos");
+    const vinos = createNavLink("Nuestros Vinos");
+    const Enoturismo = createNavLink("Enoturismo");
+
+    const contacto = createNavLink("Contacto");
     
     inicio.setAttribute("href", "index.html");
-    historia.setAttribute("href", "#historia");
+    historia.setAttribute("href", "Historia.html");
     vinedos.setAttribute("href", "Vinedos.html");
     vinos.setAttribute("href", "Vinos.html");
+    Enoturismo.setAttribute("href", "Enoturismo.html")
     contacto.setAttribute("href", "Contacto.html");
 
 
@@ -28,6 +31,7 @@
     nav.appendChild(historia);
     nav.appendChild(vinedos);
     nav.appendChild(vinos);
+    nav.appendChild(Enoturismo);
     nav.appendChild(contacto);
 
 function createNavLink(title) {

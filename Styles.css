@@ -2,55 +2,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-
-body{
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 100%;
-   background-color: #1b1b1b;
-   margin: 0px;
-}
-
-html{
+html {
     scroll-behavior: smooth;
 }
 
-#Navigation{
-display: grid;
-grid-template-columns: 20% 80%;
-justify-items: stretch;
-align-items: center;
-width: 100%;
-background-color:#606360;
-
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-text-align: center;
-
-border-bottom: 2px solid;
-border-color: rgba(22, 22, 22, 0.2);
+body {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 100%;
+    background-color: #1b1b1b;
+    margin: 0px;
 }
 
-.logo{
+#Navigation {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    justify-items: stretch;
+    align-items: center;
+    width: 100%;
+    background-color: #3b3b3b;
+
+    font-size: 80%;
+    text-align: center;
+
+    border-bottom: 2px solid;
+    border-color: rgba(15, 15, 15, 0.623);
+}
+
+nav{
+    width: 100%;
+    text-align: right;
+}
+
+.logo {
     font-family: 'Dancing Script', cursive;
     width: 100%;
     color: white;
+    font-size: 100%;
+    font-weight: lighter;
 
 }
 
-a{
-    color: #dec551;
+a {
+    color: #ffffff;
     margin: 1%;
     text-decoration: none;
     padding: 1%;
+    font-family: 'Lato', sans-serif;
+    font-size: 100%;
 }
 
-a:hover{
+a:hover {
     background-color: #8583718a;
 }
 
-.Popup{
-    background-color: rgba(0, 0, 0, 0.658); 
-    
+.AgePopup {
+    background-color: rgba(0, 0, 0, 0.658);
+
     opacity: 0.99;
     display: grid;
     position: fixed;
@@ -62,7 +70,7 @@ a:hover{
 
 }
 
-.Popup div{
+.AgePopup div {
     background-color: rgb(27, 27, 27);
     border: 2px solid rgb(156, 148, 54);
     left: 50%;
@@ -73,7 +81,7 @@ a:hover{
     font-size: 3vh;
 }
 
-.Popup button{
+.AgePopup button {
 
     border: none;
     margin: 2%;
@@ -84,29 +92,28 @@ a:hover{
     font-weight: bold;
 }
 
-
-
-.Popup input{
+.AgePopup input {
     padding: 10px;
     background-color: rgb(212, 212, 212)
 }
 
-.Popup input:hover{
+.AgePopup input:hover {
     cursor: text;
 }
 
-.Popup button{
+.AgePopup button {
     font-family: 'Lato', sans-serif;
-    color: white;
+    color: black;
+    background-color: #cf9648;
 
 }
 
-button:hover{
-    background-color: rgb(146, 146, 146);
+.AgePopup button:hover {
+    background-color: #886431;
     cursor: pointer;
 }
 
-.imgBkgrnd{
+.imgBkgrnd {
     height: 70vh;
     background-image: url(img/image\ 79.png);
     background-size: cover;
@@ -115,41 +122,41 @@ button:hover{
     width: 100%;
     margin-top: 0.1%;
 
-    animation: 
-    fadeIn 2s forwards,
-    slideDown 12s forwards
-    ;
-
-
-
+    animation:
+        fadeIn 2s forwards,
+        slideDown 12s forwards;
 }
 
-.imgBkgrnd div{
-    padding: 5%;
+.imgBkgrnd div {
+    padding: 2%;
 }
 
-.titulo, .bajada{
+.titulo,
+.bajada {
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px black;
     animation-name: fadeIn;
     animation-duration: 4s;
 }
 
-h1,h2,h4,p{
-    font-family: 'Lato', sans-serif;
-    color: white; 
+h1,
+h2,
+h4,
+p {
+    color: white;
 }
 
-input{
+.titulo {
     font-family: 'Lato', sans-serif;
-    text-align: center;
+
 }
 
-.bajada{
+.bajada {
     font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
 }
 
-.Box{
+.Box {
     display: block;
     padding: 2%;
     margin-top: 1%;
@@ -158,31 +165,38 @@ input{
     background-color: #3f3f3f;
     animation-name: fadeIn;
     animation-duration: 4s;
-    
+
 }
 
-.Box p{    
+.Box p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
 }
 
-.Box h1{   
+.Box h1 {
     text-align: left;
 }
 
 .Box img {
     float: right;
     margin-left: 2%;
-    border: 1px solid #b6b6b6; 
+    border: 1px solid #b6b6b6;
 }
 
-.FormBox{
-    display: grid;   
-    grid-template-columns: 60% 40%;
+input {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.FormBox {
+    display: grid;
+    grid-template-columns: 50% 40%;
     align-items: center;
     justify-items: center;
-    gap: 2%;
-    width: 95%;
+    justify-content: center;
+    gap: 4%;
+    width: 100%;
+    padding: 5%;
     background-color: rgba(219, 219, 219, 0.13);
     border-top: 1px solid black;
 
@@ -191,11 +205,13 @@ input{
 }
 
 .Formulario {
-    background-color: rgb(117, 117, 117);
+    background-color: rgb(36, 36, 36);
     padding: 2%;
-    margin: 5%;
-    width: 90%;
-    grid-row: 1 / span 2;
+    grid-column: 1/2;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+
 }
 
 
@@ -207,11 +223,11 @@ input{
     grid-template-columns: 90%;
 }
 
-.Formulario input{
+.Formulario input {
     background-color: rgb(239 239 239);
     border-radius: 1px;
     border: 1px solid rgb(156, 156, 156);
-    height:25px;
+    height: 25px;
 }
 
 .Formulario textarea {
@@ -221,45 +237,50 @@ input{
 
 label {
     font-family: 'Lato', sans-serif;
-    color: #dec551;
+    color: #ffffff;
 }
 
-.Map{
+.Map {
 
-    background-color: black;
-
-    display: grid;
-    grid-template-columns: 100%;
-    
-    width: fit-content;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    width: 100%;
+    padding: 2%;
+    height: 100%;
     justify-items: stretch;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
 }
 
-.Social{
+.Map iframe {
+    width: 100%;
+    height: 100%;
+}
 
-    display: grid;
-    width: 90%;
+.Social {
+
+
+    display: flex;
+    gap: 4%;
+    width: 100%;
     justify-items: center;
+    background-color: rgb(36, 36, 36);
 
-  
+
 }
 
-.Social img{
-    width: 50px;
+.Social img {
+    width: 30px;
 }
 
-.Social a{
+.Social a {
     display: flex;
     align-items: center;
     gap: 5%;
     font-family: 'Lato', sans-serif;
-    background-color: rgb(184, 184, 184);
-    width: 90%;
     font-size: 100%;
     text-align: left;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 @keyframes fadeIn {
@@ -281,3 +302,44 @@ label {
     to {
         background-position: bottom;
     }
+
+}
+
+.mySlides1, .mySlides2, .mySlides3 {
+    display: none;
+   
+}
+
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  background-color: rgba(63, 63, 63, 0.692);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}

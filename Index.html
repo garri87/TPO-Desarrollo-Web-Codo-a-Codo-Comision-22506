@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="Styles.css">
+
+    <script src="https://kit.fontawesome.com/f97f302caa.js" crossorigin="anonymous"></script>
+
     <title>Luigi Rosca</title>
 </head>
 
@@ -50,7 +53,7 @@
 
     </div>
 
-    <div class="Popup" id="popup">
+    <div class="AgePopup" id="agePopup">
         <div>
 
             <h4>Sitio solo para mayores de 18 años</h4>
@@ -68,12 +71,12 @@
 
 <script>
 
-    const popup = document.getElementById("popup");
+    const popup = document.getElementById("agePopup");
 
     if (localStorage.getItem("age") >= 18) {
         popup.style.display = 'none';
     } else {
-        popup.style.display = 'block';
+        popup.style.display = 'grid';
     }
 
     function ValidateDate() {
