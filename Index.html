@@ -14,24 +14,21 @@
 </head>
 
 <body>
+    <script src="Nav.js"></script>
 
-    <div>
-        <script src="Nav.js"></script>
-    </div>
-
-
-    <div class="imgBkgrnd">
+    <div class="Banner">
         <div>
             <h1 class="titulo">La verdadera escencia de la naturaleza mezclado con pasión</h1>
             <h2 class="bajada"> Mas de 120 años generando emociones únicas</h2>
         </div>
     </div>
 
-    <div class="Box" id="historia">
+    <div class="Box">
         <h1 class="titulo">
             Nosotros
         </h1>
-        <img src="Img/enologo.jpg" class="imgHistoria" width="50%" alt="Copa de vino">
+        <img src="Img/enologo.jpg" class="imgHistoria" width="50%" alt="Copa de vino"
+            style="float: right; margin-left: 2%;">
         <p>
             Somos una Bodega con Herencia Familiar que se proyecta con sus valores de tradición, calidad, prestigio,
             innovación y contemporaneidad en la vitivinicultura argentina. <br>
@@ -46,7 +43,8 @@
             Bodegas Luigi Rosca es hoy una marca global con presencia en más de 40 países representando los valores y la
             calidad del vino argentino en todo el mundo.<br>
             <br>
-            El terroir de Valle de Uco es un hito para Bodegas Luigi Rosca por que marca el inicio, el primer movimiento de
+            El terroir de Valle de Uco es un hito para Bodegas Luigi Rosca por que marca el inicio, el primer movimiento
+            de
             nuestra estrategia de marca global. Es el crecimiento natural de nuestra historia de más de 120 años en la
             búsqueda de nuevos sabores para el mercado local e internacional.<br>
         </p>
@@ -67,13 +65,31 @@
 
 
     </div>
+
+    <footer class="Box" style="width: 100%;">
+
+        <div class="Social" style="justify-content: flex-start; gap: 1px;">
+
+            <a href=""><i class="fa-brands fa-square-facebook fa-2xl "></i></a>
+
+            <a href=""><i class="fa-brands fa-square-instagram fa-2xl "></i></a>
+
+            <a href="https://wa.me/5492216281775"><i class="fa-brands fa-square-whatsapp fa-2xl "></i></a>
+
+        </div>
+
+        <p style="text-align: center; font-size: 60%; width: 90%;">© 2022 Luigi Rosca | Beber con moderación. No se vende
+            a menores de 18 años.</p>
+    </footer>
+
+
 </body>
 
 <script>
 
     const popup = document.getElementById("agePopup");
 
-    if (localStorage.getItem("age") >= 18) {
+    if (sessionStorage.getItem("age") >= 18) {
         popup.style.display = 'none';
     } else {
         popup.style.display = 'grid';
@@ -92,7 +108,7 @@
         if (age >= 18) {
             popup.style.display = 'none';
 
-            localStorage.setItem("age", age);
+            sessionStorage.setItem("age", age);
         }
         else {
             alert("Lo sentimos, no puede ingresar al sitio");

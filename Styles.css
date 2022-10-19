@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -12,6 +13,44 @@ body {
     grid-template-columns: 100%;
     background-color: #1b1b1b;
     margin: 0px;
+}
+
+a {
+    color: #ffffff;
+    margin: 1%;
+    text-decoration: none;
+    padding: 1%;
+    font-family: 'Lato', sans-serif;
+    font-size: 100%;
+}
+
+nav a:hover {
+    background-color: #8583718a;
+}
+
+h1,
+h2,
+h4,
+p,
+ul,
+li {
+    color: aliceblue;
+    font-size: 100%;
+}
+
+nav {
+    width: 100%;
+    text-align: right;
+}
+
+input {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+label {
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
 }
 
 #Navigation {
@@ -29,31 +68,14 @@ body {
     border-color: rgba(15, 15, 15, 0.623);
 }
 
-nav{
-    width: 100%;
-    text-align: right;
-}
 
 .logo {
     font-family: 'Dancing Script', cursive;
     width: 100%;
     color: white;
-    font-size: 100%;
+    font-size: 150%;
     font-weight: lighter;
 
-}
-
-a {
-    color: #ffffff;
-    margin: 1%;
-    text-decoration: none;
-    padding: 1%;
-    font-family: 'Lato', sans-serif;
-    font-size: 100%;
-}
-
-a:hover {
-    background-color: #8583718a;
 }
 
 .AgePopup {
@@ -113,7 +135,7 @@ a:hover {
     cursor: pointer;
 }
 
-.imgBkgrnd {
+.Banner {
     height: 70vh;
     background-image: url(img/image\ 79.png);
     background-size: cover;
@@ -127,7 +149,8 @@ a:hover {
         slideDown 12s forwards;
 }
 
-.imgBkgrnd div {
+.Banner div {
+    background: linear-gradient(180deg, rgba(39, 39, 39, 1) 0%, rgba(39, 39, 39, 0.60) 65%, rgba(39, 39, 39, 0) 100%);
     padding: 2%;
 }
 
@@ -135,20 +158,15 @@ a:hover {
 .bajada {
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px black;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-}
+    animation:
+        fadeIn 4s forwards;
 
-h1,
-h2,
-h4,
-p {
-    color: white;
 }
 
 .titulo {
-    font-family: 'Lato', sans-serif;
-
+    font-family: 'Playfair Display', serif;
+    font-weight: 10;
+    font-size: 2rem;
 }
 
 .bajada {
@@ -157,10 +175,10 @@ p {
 }
 
 .Box {
-    display: block;
+    display: inline;
     padding: 2%;
     margin-top: 1%;
-    width: 70%;
+    width: 90%;
     text-align: justify;
     background-color: #3f3f3f;
     animation-name: fadeIn;
@@ -169,24 +187,24 @@ p {
 }
 
 .Box p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
 }
 
 .Box h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
     text-align: left;
+    border-bottom: 2px solid white;
+    width: 30%;
 }
 
 .Box img {
-    float: right;
-    margin-left: 2%;
+
     border: 1px solid #b6b6b6;
 }
 
-input {
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-}
+
 
 .FormBox {
     display: grid;
@@ -235,10 +253,7 @@ input {
 
 }
 
-label {
-    font-family: 'Lato', sans-serif;
-    color: #ffffff;
-}
+
 
 .Map {
 
@@ -258,15 +273,12 @@ label {
 }
 
 .Social {
-
-
     display: flex;
     gap: 4%;
     width: 100%;
+
     justify-items: center;
-    background-color: rgb(36, 36, 36);
-
-
+    justify-content: flex-end;
 }
 
 .Social img {
@@ -274,13 +286,7 @@ label {
 }
 
 .Social a {
-    display: flex;
-    align-items: center;
-    gap: 5%;
-    font-family: 'Lato', sans-serif;
-    font-size: 100%;
-    text-align: left;
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 @keyframes fadeIn {
@@ -305,41 +311,47 @@ label {
 
 }
 
-.mySlides1, .mySlides2, .mySlides3 {
+.Slides1,
+.Slides2,
+.Slides3 {
     display: none;
-   
+    justify-content: center;
 }
 
-img {vertical-align: middle;}
+img {
+    vertical-align: middle;
+}
 
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
 
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  background-color: rgba(63, 63, 63, 0.692);
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    background-color: rgba(63, 63, 63, 0.692);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-  background-color: #f1f1f1;
-  color: black;
+.prev:hover,
+.next:hover {
+    background-color: #f1f1f1;
+    color: black;
 }
