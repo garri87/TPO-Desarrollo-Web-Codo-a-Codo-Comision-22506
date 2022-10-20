@@ -24,7 +24,7 @@ html {
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 480px) {
     #Navigation {
         display: grid;
         grid-template-columns: 100%;
@@ -44,6 +44,12 @@ html {
         justify-content: space-around;
         align-items: center;
     }
+
+    .FormBox{
+        Display: inline-flex;
+        flex-direction: column;
+    }
+
 }
 
 
