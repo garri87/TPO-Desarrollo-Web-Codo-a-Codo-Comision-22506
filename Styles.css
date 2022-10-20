@@ -7,12 +7,96 @@ html {
     scroll-behavior: smooth;
 }
 
+@media screen and (max-width: 480px) {
+
+    .Box .Social {
+
+
+        Display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .FormBox{
+        Display: inline-flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    #Navigation {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: stretch;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Social{
+        display: flex;
+        justify-items: center;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+
+    #Navigation {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        justify-items: stretch;
+        align-items: center;
+        width: 100%;
+        font-size: 200%;
+    }
+
+    nav {
+        width: 100%;
+        text-align: right;
+    }
+
+    .Box {
+        display: inline;
+    }
+
+    
+    .FormBox{
+        display: grid;
+        grid-template-columns: 50% 40%;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    .Social{
+        display: flex;
+        justify-items: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+
+
+
 body {
     display: grid;
     justify-items: center;
     grid-template-columns: 100%;
     background-color: #1b1b1b;
     margin: 0px;
+    height: 100vh;
 }
 
 a {
@@ -23,6 +107,7 @@ a {
     font-family: 'Lato', sans-serif;
     font-size: 100%;
 }
+
 
 nav a:hover {
     background-color: #8583718a;
@@ -38,10 +123,7 @@ li {
     font-size: 100%;
 }
 
-nav {
-    width: 100%;
-    text-align: right;
-}
+
 
 img {
     vertical-align: middle;
@@ -58,16 +140,9 @@ label {
 }
 
 #Navigation {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    justify-items: stretch;
-    align-items: center;
-    width: 100%;
     background-color: #3b3b3b;
-
-    font-size: 80%;
+    font-size: 3vh;
     text-align: center;
-
     border-bottom: 2px solid;
     border-color: rgba(15, 15, 15, 0.623);
 }
@@ -75,7 +150,6 @@ label {
 
 .logo {
     font-family: 'Dancing Script', cursive;
-    width: 100%;
     color: white;
     font-size: 150%;
     font-weight: lighter;
@@ -179,7 +253,7 @@ label {
 }
 
 .Box {
-    display: inline;
+
     padding: 2%;
     margin-top: 1%;
     width: 90%;
@@ -195,7 +269,7 @@ label {
     color: white;
 }
 
-.BoxTitle{
+.BoxTitle {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     text-align: left;
@@ -212,12 +286,7 @@ label {
 
 
 .FormBox {
-    display: grid;
-    grid-template-columns: 50% 40%;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    gap: 4%;
+
     width: 100%;
     padding: 5%;
     background-color: rgba(219, 219, 219, 0.13);
@@ -277,14 +346,11 @@ label {
 }
 
 .Social {
-    display: flex;
-    width: 100%;
 
-    justify-items: center;
-    justify-content: flex-end;
-    align-items: center;
+    width: 100%;
+    width: 100%;
 }
-}
+
 
 .Social img {
     width: 30px;
@@ -293,6 +359,14 @@ label {
 .Social a {
     color: white;
 }
+
+.SocialButtons{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 2%;
+}
+
 
 @keyframes fadeIn {
     from {
@@ -323,7 +397,7 @@ label {
     justify-content: center;
 }
 
-#slideImage{
+#slideImage {
     width: 100%;
     height: 100%;
 }
@@ -360,24 +434,4 @@ label {
 .next:hover {
     background-color: #f1f1f1;
     color: black;
-}
-
-
-@media screen and (max-width: 480px) {
-
-
-
-}
-
-@media screen and (max-width: 800px) {
-
-
-
-}
-
-
-@media screen and (min-width: 800px) {
-
-
-
 }
