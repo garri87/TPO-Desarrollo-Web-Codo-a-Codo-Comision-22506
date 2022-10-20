@@ -278,11 +278,12 @@ label {
 
 .Social {
     display: flex;
-    gap: 4%;
     width: 100%;
 
     justify-items: center;
     justify-content: flex-end;
+    align-items: center;
+}
 }
 
 .Social img {
