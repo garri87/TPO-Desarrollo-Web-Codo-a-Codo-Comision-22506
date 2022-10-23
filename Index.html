@@ -14,12 +14,21 @@
 </head>
 
 <body>
+    <script src="api.js"></script>
     <script src="Nav.js"></script>
 
     <div class="Banner">
         <div>
             <h1 class="titulo">La verdadera escencia de la naturaleza mezclado con pasión</h1>
             <h2 class="bajada"> Mas de 120 años generando emociones únicas</h2>
+           <div class="apiweather" id="api">
+                <h4 id="localidad"></h4>
+                <button onclick="cambiarLocalidad()" id="cambiarLocalidad"> > </button>
+                <h3 class="" id="temperatura"></h3>
+                <h3 class="" id="humedad"></h3>
+                <h3><img src="" id="iconoMeteorologico" alt="tiempo-significativo"></h3>
+            
+            </div>
         </div>
     </div>
 
@@ -51,7 +60,7 @@
 
     </div>
 
-    <div class="AgePopup" id="agePopup">
+    <!-- <div class="AgePopup" id="agePopup">
         <div>
 
             <h4>Sitio solo para mayores de 18 años</h4>
@@ -64,9 +73,9 @@
         </div>
 
 
-    </div>
+    </div> -->
 
-    <footer class="Box" style="width: 100%;">
+    <footer class="Box" >
 
         <div class="Social">
             <h1 class="logo">Luigi Rosca</h1>
