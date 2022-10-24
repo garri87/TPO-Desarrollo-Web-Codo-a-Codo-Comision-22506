@@ -10,13 +10,26 @@ html {
     scroll-behavior: smooth;
 }
 
-*{
+* {
     font-family: 'Monda', sans-serif;
 }
 
 @media screen and (max-width: 480px) {
 
-    .Box, .Social {
+    #Navigation {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: stretch;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav{
+        display: grid;
+    };
+
+    .Box,
+    .Social {
 
         Display: inline-flex;
         align-items: center;
@@ -24,7 +37,7 @@ html {
 
     }
 
-    .FormBox{
+    .FormBox {
         Display: inline-flex;
         flex-direction: column;
     }
@@ -45,14 +58,14 @@ html {
         text-align: center;
     }
 
-    .Social{
+    .Social {
         display: flex;
         justify-items: center;
         justify-content: space-around;
         align-items: center;
     }
 
-    .FormBox{
+    .FormBox {
         Display: inline-flex;
         flex-direction: column;
     }
@@ -80,8 +93,8 @@ html {
         display: inline;
     }
 
-    
-    .FormBox{
+
+    .FormBox {
         display: grid;
         grid-template-columns: 50% 40%;
         align-items: center;
@@ -90,7 +103,7 @@ html {
         gap: 4%;
     }
 
-    .Social{
+    .Social {
         display: flex;
         justify-items: center;
         justify-content: space-between;
@@ -131,7 +144,7 @@ p,
 ul,
 li {
     color: aliceblue;
-    font-size: 100%;
+  
 }
 
 
@@ -148,9 +161,13 @@ label {
     color: #ffffff;
 }
 
+button{
+    cursor: pointer;
+}
+
 #Navigation {
     background-color: #3b3b3b;
-    font-size: 3vh;
+    font-size: 100%;
     text-align: center;
     border-bottom: 2px solid;
     border-color: rgba(15, 15, 15, 0.623);
@@ -277,16 +294,16 @@ label {
 }
 
 .BoxTitle {
-   /* font-style: italic;*/
     text-align: left;
     border-bottom: 2px solid white;
     width: 60%;
     font-size: 150%;
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 2px;
-    
+
 }
-#esencia{
+
+#esencia {
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 1px;
 
@@ -295,36 +312,35 @@ label {
 #subtitulo {
     font-family: 'Monda', sans-serif;
     font-style: italic;
-    text-decoration:overline;
+    text-decoration: overline;
 }
 
-.title1{
+.title1 {
     font-family: 'Monda', sans-serif;
     font-style: italic;
 }
-.title2{
+
+.title2 {
     font-family: 'Monda', sans-serif;
-    text-decoration:underline;
+    text-decoration: underline;
     font-size: 17px;
     letter-spacing: 1px;
-
-
 }
 
-
-#textoParaContactar{
+#textoParaContactar {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
 }
 
-#paraContactar{
+#paraContactar {
     display: flex;
     text-align: center;
-    
+
 }
-#contactanos{
+
+#contactanos {
     color: #ffffff;
     margin: 0%;
     text-decoration: none;
@@ -332,8 +348,8 @@ label {
 
 }
 
-#contactanos:hover{
-    text-decoration:underline;
+#contactanos:hover {
+    text-decoration: underline;
     font-size: 20px;
 }
 
@@ -341,8 +357,6 @@ label {
 
     border: 1px solid #b6b6b6;
 }
-
-
 
 .FormBox {
 
@@ -364,7 +378,6 @@ label {
 
 }
 
-
 .Formulario form {
     color: black;
     display: grid;
@@ -385,7 +398,7 @@ label {
 
 }
 
-#submit:hover{
+#submit:hover {
     background-color: rgb(189, 187, 187);
 }
 
@@ -408,9 +421,8 @@ label {
 }
 
 .Social {
-
-    width: 100%;
-    width: 100%;
+    width: 90%;
+    height: 90%;
 }
 
 
@@ -422,7 +434,7 @@ label {
     color: white;
 }
 
-.SocialButtons{
+.SocialButtons {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -499,12 +511,12 @@ label {
 }
 
 
-div.apiweather{
+div.apiweather {
     background-image: url("./Img/otras/apiweather-background.JPG");
     background-position: -1px;
     opacity: 90%;
-    --weather-width:250px;
-    --weather-button-width:30px;
+    --weather-width: 250px;
+    --weather-button-width: 30px;
     width: var(--weather-width);
     position: absolute;
     text-align: center;
@@ -518,12 +530,14 @@ div.apiweather{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: 20px 0px 0px 0px;
 }
-div.apiweather h4{
-    
+
+div.apiweather h4 {
+
     text-align: center;
     width: var(--weather-width)
 }
-div.apiweather button{
+
+div.apiweather button {
     position: absolute;
     width: 30px;
     right: 5px;
@@ -533,55 +547,61 @@ div.apiweather button{
     font-size: 20px;
     color: white;
 }
-div.apiweather button:hover{
+
+div.apiweather button:hover {
     background-color: white;
     color: #1b1b1b;
 }
-div.apiweather button:active{
+
+div.apiweather button:active {
     background-color: #1b1b1b;
     color: white;
 }
 
-div.apiweather img{
+div.apiweather img {
     display: flex;
-    
+
 }
-div.apiweather h3{
+
+div.apiweather h3 {
     justify-content: center;
     color: #ffffff;
     font-size: 24px;
     display: flex;
     width: calc(var(--weather-width)/3);
 }
-#temperatura::before{
+
+#temperatura::before {
     content: 'Temp';
     position: absolute;
     font-size: 10px;
     bottom: 68px;
 }
-#humedad::before{
+
+#humedad::before {
     content: 'Humedad';
     position: absolute;
     font-size: 10px;
     bottom: 68px;
 }
 
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 80px;
     margin-top: 30px;
     width: 100%;
+    height: fit-content;
     padding: 10px 15px 30px 50px;
 }
 
-.iconos{
+.iconos {
     width: 100%;
     text-align: center;
 }
 
-.permiso{
-    text-align: center; 
+.permiso {
+    text-align: center;
     font-size: 15px;
 }
